@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Litter Less | Small Actions, Cleaner Future</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="logo" href="#home">LITTER<span>LESS</span></a>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <div class="nav-links">
+      <a href="#problem">The Problem</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#game">Game</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#quiz">Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-content container">
+    <p class="eyebrow">COMMUNITY PROJECT • CLEANER FUTURE</p>
+    <h1>One piece of litter<br><span>is one too many.</span></h1>
+    <p class="hero-text">Litter doesn't disappear when we stop looking at it. It moves into drains, waterways, parks and ecosystems. The good news? Small choices add up.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#solutions">What can I do?</a>
+      <a class="btn ghost" href="#problem">Learn the facts ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div><strong>8M+</strong><span>tonnes of plastic enter oceans globally each year*</span></div>
+    <div><strong>♻</strong><span>Reduce, reuse and recycle before throwing something away.</span></div>
+    <div><strong>1</strong><span>small action can influence the people around you.</span></div>
+  </div>
+</section>
+
+<section id="problem" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">THE PROBLEM</p>
+      <h2>Litter has a bigger journey than you think.</h2>
+      <p>That wrapper dropped on the footpath can be blown or washed into a stormwater drain. From there, litter can reach rivers and eventually the ocean.</p>
+    </div>
+    <div class="journey">
+      <div class="journey-card"><div class="icon">🛍️</div><h3>1. Dropped</h3><p>A piece of rubbish is left on a street, park or school ground.</p></div>
+      <div class="arrow">→</div>
+      <div class="journey-card"><div class="icon">🌧️</div><h3>2. Moved</h3><p>Wind and rain can carry it towards gutters and waterways.</p></div>
+      <div class="arrow">→</div>
+      <div class="journey-card"><div class="icon">🌊</div><h3>3. Enters water</h3><p>Litter can travel into creeks, rivers and eventually the ocean.</p></div>
+      <div class="arrow">→</div>
+      <div class="journey-card"><div class="icon">🐢</div><h3>4. Causes harm</h3><p>Wildlife can be injured by or become trapped in rubbish.</p></div>
+    </div>
+    <div class="impact-grid">
+      <article class="impact-card"><div class="impact-number">01</div><h3>Wildlife</h3><p>Animals can mistake litter for food or become tangled in rubbish. Keeping waste out of habitats protects local ecosystems.</p></article>
+      <article class="impact-card"><div class="impact-number">02</div><h3>Waterways</h3><p>Plastic and other rubbish can move through stormwater systems into creeks, rivers and the sea.</p></article>
+      <article class="impact-card"><div class="impact-number">03</div><h3>Our community</h3><p>Litter makes public places less enjoyable and can cost councils money and time to clean up.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="section alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">THE SOLUTION</p>
+      <h2>Make the better choice easier.</h2>
+      <p>You don't need to be perfect. Focus on practical habits that reduce the amount of waste you create and stop rubbish from becoming litter.</p>
+    </div>
+    <div class="solution-grid">
+      <button class="solution-card" data-modal="reduce"><span class="solution-icon">↓</span><h3>Reduce</h3><p>Buy less single-use stuff.</p><span>Explore →</span></button>
+      <button class="solution-card" data-modal="reuse"><span class="solution-icon">↻</span><h3>Reuse</h3><p>Give products more than one life.</p><span>Explore →</span></button>
+      <button class="solution-card" data-modal="recycle"><span class="solution-icon">♻</span><h3>Recycle</h3><p>Sort items into the right stream.</p><span>Explore →</span></button>
+      <button class="solution-card" data-modal="bin"><span class="solution-icon">✓</span><h3>Bin it</h3><p>If you carry it in, carry it out.</p><span>Explore →</span></button>
+    </div>
+    <div class="tip-box">
+      <div><span class="eyebrow">QUICK WIN</span><h3>Pack a “leave no trace” kit.</h3><p>Keep a reusable bottle, small container and spare bag with you.</p></div>
+      <button class="btn primary" id="randomTip">Give me a tip</button>
+      <p class="tip-result" id="tipResult"></p>
+    </div>
+  </div>
+</section>
+
+<section id="game" class="section game-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">PLAY FOR THE PLANET</p>
+      <h2>Clean-Up Quest</h2>
+      <p>Move your little character around the park and collect every piece of rubbish before time runs out.</p>
+    </div>
+    <div class="game-card">
+      <div class="game-top">
+        <div><strong>Score</strong><span id="gameScore">0</span></div>
+        <div><strong>Rubbish left</strong><span id="gameLeft">10</span></div>
+        <div><strong>Time</strong><span id="gameTime">30</span></div>
+      </div>
+      <canvas id="gameCanvas" width="900" height="500"></canvas>
+      <div class="game-controls">
+        <button class="btn primary" id="startGame">Start Game</button>
+        <span>Keyboard: <b>WASD</b> or <b>Arrow Keys</b> • Pick up rubbish by touching it</span>
+      </div>
+      <div id="gameMessage" class="game-message">Press Start Game to begin your clean-up mission!</div>
+    </div>
+  </div>
+</section>
+
+<section id="challenge" class="section challenge-section">
+  <div class="container challenge-layout">
+    <div>
+      <p class="eyebrow">7-DAY COMMUNITY CHALLENGE</p>
+      <h2>Can you make your week less wasteful?</h2>
+      <p>Complete simple actions and track your progress. The goal isn't perfection — it's building habits that stick.</p>
+    </div>
+    <div class="challenge-box">
+      <div class="progress-top"><span id="progressText">0 / 7 completed</span><span id="progressPercent">0%</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <label><input type="checkbox" class="challenge-check"> Use a reusable drink bottle today</label>
+      <label><input type="checkbox" class="challenge-check"> Put one piece of litter in the bin</label>
+      <label><input type="checkbox" class="challenge-check"> Avoid a single-use item</label>
+      <label><input type="checkbox" class="challenge-check"> Reuse or repair something</label>
+      <label><input type="checkbox" class="challenge-check"> Sort your recycling correctly</label>
+      <label><input type="checkbox" class="challenge-check"> Remind a friend to bin their rubbish</label>
+      <label><input type="checkbox" class="challenge-check"> Spend 10 minutes cleaning a shared space</label>
+    </div>
+  </div>
+</section>
+
+<section id="quiz" class="section">
+  <div class="container quiz-wrap">
+    <div class="section-heading"><p class="eyebrow">TEST YOUR KNOWLEDGE</p><h2>Can you beat the litter quiz?</h2></div>
+    <div class="quiz-card">
+      <div id="quizContent"></div>
+      <div class="quiz-footer"><span id="quizScore">Question 1 of 5</span><button class="btn primary" id="nextBtn" disabled>Next</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <p class="eyebrow">START WHERE YOU ARE</p>
+    <h2>Don't wait for someone else to clean it up.</h2>
+    <p>Notice it. Bin it. Reduce it. Reuse it. Then encourage someone else to do the same.</p>
+    <a href="#challenge" class="btn primary">Take the challenge</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <div><strong>LITTERLESS</strong><p>A community project about litter, pollution and practical change.</p></div>
+    <div><a href="#home">Back to top ↑</a></div>
+  </div>
+  <div class="container disclaimer">*Global figures vary by source and definition. Check your local council's waste rules because recycling systems differ between areas.</div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box"><button class="close" aria-label="Close">×</button><div id="modalContent"></div></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
